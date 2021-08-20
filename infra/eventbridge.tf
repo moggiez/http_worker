@@ -17,7 +17,7 @@ module "event_type_to_lambda" {
   name          = "${local.event_type_normalized}-to-${var.project_name}"
   account       = var.account
   region        = var.region
-  detail_types  = [var.event_type]
+  detail_type  = var.event_type
   eventbus_name = var.eventbus_name
   lambda        = module.event_driven_lambda.lambda
 }
